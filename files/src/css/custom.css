@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+    --ifm-color-primary: #2e8555;
+    --ifm-color-primary-dark: #29784c;
+    --ifm-color-primary-darker: #277148;
+    --ifm-color-primary-darkest: #205d3b;
+    --ifm-color-primary-light: #33925d;
+    --ifm-color-primary-lighter: #359962;
+    --ifm-color-primary-lightest: #3cad6e;
+    --ifm-code-font-size: 95%;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  }
+  
+  /* For readability concerns, you should choose a lighter palette in dark mode. */
+  [data-theme='dark'] {
+    --ifm-color-primary: #25c2a0;
+    --ifm-color-primary-dark: #21af90;
+    --ifm-color-primary-darker: #1fa588;
+    --ifm-color-primary-darkest: #1a8870;
+    --ifm-color-primary-light: #29d5b0;
+    --ifm-color-primary-lighter: #32d8b4;
+    --ifm-color-primary-lightest: #4fddbf;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+    /* Tables */
+    /* --ifm-table-border-color: hsl(219, 10%, 29%);
+    --ifm-table-head-background: hsl(231, 9%, 15%); */
+    
+  }
+  
+  .collapse {
+    --ifm-color-info-dark: var(--ifm-color-emphasis-100);
+    background-color: var(--ifm-color-emphasis-200);
+    border-radius: 4px;
+    padding: 15px;
+    color: #e0e0e0;
+  }
+
+  .collapse summary {
+      list-style: none;
+      font-weight: bold;
+      color: #e0e0e0;
+  }
+
+  .collapse .card a {
+    text-decoration: none;
+    color: inherit; /* Использует цвет текста родительского элемента */
+  }
+
+  .card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .card {
+    width: 100%;
+    /* margin-bottom: 8px; */
+    align-items: center;
+  }
+
+  .card h2 {
+    color: #e0e0e0
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  .footer {
+    padding: 0.05rem;
+    /* padding: var(--ifm-spacing-horizontal) var(--ifm-spacing-horizontal); */
+  }
+
+  .table-container {
+    margin: 0;
+    padding: 0;
+  }
+  /* .row .docItemCol_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module {
+    max-width: 85% !important;
+  } */
+
+/* table {
+  display: table;
+  width: initial;
+  margin: 0 auto;
+} */
+
+/* table td:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+} */
+
+*,
+::after,
+::before,
+::backdrop,
+::file-selector-button {
+  box-sizing: border-box; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 2 */
+  border: 0 solid; /* 3 */
+}
+
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}
+
+table {
+  @apply border border-solid rounded-box inline-block border-black;
+}
+
+/* table {
+  @apply border border-solid border-slate-500 border-collapse;
+  @apply inline-block align-middle rounded; 
+} */
+
+table th,
+table td {
+  @apply border-black;
+}
+
+h1 {
+  color: hsl(56, 44%, 76%);
+}
+
+h2 {
+  color: hsl(257, 33%, 82%);
+}
+
+h3 {
+  color: hsl(192, 34%, 74%);
+}
+
+h4 {
+  color: hsl(153, 35%, 75%);
+}
+
+h5 {
+  color: hsl(224, 26%, 83%);
+}
+
+h6 {
+  color: hsl(223, 14%, 75%);
+}
+
+strong {
+  color: hsl(61, 55%, 69%);
+}
+
+pre code {
+  background-color: hsl(231, 9%, 15%)
+}
+
+/* .col--3 {
+  --ifm-col-width: calc(3 / 20 * 100%);
+} */
+

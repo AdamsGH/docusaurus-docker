@@ -1,0 +1,40 @@
+x-common-config: &common-config
+  build:
+    context: ./src
+    args:
+      - version=${version:-3.6.0}
+      - packages=${packages:-}
+  image: docusaurus:${version:-3.6.0}
+  volumes:
+      - ./files:/opt/docusaurus:rw
+      - /opt/docusaurus/node_modules
+      - /opt/docusaurus/config
+  healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+  environment: &common-env
+    BUILD_PACKAGES: ${packages:-}
+
+services:
+  docusaurus:
+    <<: *common-config
+    container_name: docusaurus
+    ports:
+      - 3152:3000
+    environment:
+      <<: *common-env
+      RUN_MODE: ${mode}
+      DEV_LOCALE: ${locale:-en}
+
+  docusaurus-dev:
+    <<: *common-config
+    container_name: docusaurus-dev
+    ports:
+      - 3153:3000
+    environment:
+      <<: *common-env
+      RUN_MODE: dev
+      DEV_LOCALE: en

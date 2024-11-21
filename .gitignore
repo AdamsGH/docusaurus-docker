@@ -1,0 +1,7 @@
+_stash
+docusaurus.code-workspace
+files/.docusaurus
+files/build
+files/package*.json
+files/tsconfig.json
+TODO.md
